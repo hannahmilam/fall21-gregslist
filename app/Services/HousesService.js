@@ -3,7 +3,6 @@ import { House } from "../Models/House.js"
 
 class HousesService{
 addHouse(houseData) {
-  console.log('add house in houses service')
   let testHouse = new House(houseData)
   ProxyState.houses = [...ProxyState.houses, testHouse]
 }

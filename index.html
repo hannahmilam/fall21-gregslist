@@ -35,7 +35,9 @@
             <li class="list-group-item nav-link selectable" onclick="app.housesController.showHouses()">
               Houses
             </li>
-            <li class="list-group-item nav-link selectable">Jobs</li>
+            <li class="list-group-item nav-link selectable" onclick="app.animalsController.showAnimals()">
+              Animals
+            </li>
           </ul>
         </div>
         <div class="col-lg-10 main-content">
@@ -55,7 +57,7 @@
                 <div class="form-group">
                   <label for="make" class="">Make:</label>
                   <select name="make" id="make" required class="form-control">
-                    <option disabled selected value="">Please Choose your car make</option> 
+                    <option disabled selected value="">Please Choose your car make</option>
                     <option>Honda</option>
                     <option>Hyundai</option>
                     <option>Tesla</option>
