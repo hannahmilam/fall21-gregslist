@@ -13,14 +13,14 @@ export class House {
 
   get CardTemplate(){
     return /*html*/`
-    <div class="col-lg-3 mb-4 listing">
+    <div class="col-lg-4 mb-4 listing">
       <div class="card">
         <img src="${this.img}" alt="listing image" class="rounded">
         <div class="card-body">
-          <h5 class="d-flex justify-content-between">
-            <span>Bedrooms: ${this.rooms}, Bathrooms: ${this.bathrooms}</span>
-            <span>Price: $${this.price}, year built: ${this.year}</span>
-          </h5>
+          <p class="d-flex justify-content-between">
+          ${this.type} | ${this.year} </p>
+          <p class="d-flex justify-content-between">Price: $${this.price}</p>
+          <p class="d-flex justify-content-between">Bedrooms: ${this.rooms} | Bathrooms: ${this.bathrooms}</p>
           <p>${this.description}</p>
         </div>
       </div>
