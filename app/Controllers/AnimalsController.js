@@ -44,7 +44,9 @@ export class AnimalsController {
     showAnimals(){
       _drawAnimals()
       document.getElementById('controls').innerHTML = `
-      <button class="btn btn-info" onclick="app.animalsController.toggleAnimalForm()">Add Animal</button>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        List Animal For Sale
+      </button>
       `
       document.getElementById('forms').innerHTML = getAnimalFormTemplate()
     }
@@ -54,3 +56,6 @@ export class AnimalsController {
     }
 
   }
+
+
+  // <button class="btn btn-info custom-font" onclick="app.animalsController.toggleAnimalForm()">Add Animal</button>

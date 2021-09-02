@@ -1,6 +1,14 @@
 export function getCarFormTemplate() {
   return /*html*/`
-  <form class="bg-white rounded p-3 shadow visually-hidden" onsubmit="app.carsController.addCar()"
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add Car Listing</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+  <form class="bg-white rounded p-3 shadow" onsubmit="app.carsController.addCar()"
   id="car-form">
   <div class="form-group">
     <label for="make" class="">Make:</label>
@@ -51,8 +59,13 @@ export function getCarFormTemplate() {
   </div>
   <div class="button-group my-3">
     <button type="reset" class="btn btn-secondary">clear</button>
-    <button type="submit" class="btn btn-primary">submit</button>
+    <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">submit</button>
   </div>
 </form>
+</div>
+      
+</div>
+</div>
+</div>
   `
 }

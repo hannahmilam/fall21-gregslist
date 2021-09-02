@@ -1,6 +1,14 @@
 export function getHouseFormTemplate() {
   return /*html*/`
-  <form class="bg-white rounded p-3 shadow visually-hidden" onsubmit="app.housesController.addHouse()"
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+  <form class="bg-white rounded p-3 shadow" onsubmit="app.housesController.addHouse()"
   id="house-form">
   <div class="form-group">
     <label for="type" class="">Type:</label>
@@ -54,8 +62,13 @@ export function getHouseFormTemplate() {
   </div>
   <div class="button-group my-3">
     <button type="reset" class="btn btn-secondary">clear</button>
-    <button type="submit" class="btn btn-primary">submit</button>
+    <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">submit</button>
   </div>
 </form>
+</div>
+      
+</div>
+</div>
+</div>
   `
 }

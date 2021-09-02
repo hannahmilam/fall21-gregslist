@@ -7,5 +7,4 @@ class App {
 
   animalsController = new AnimalsController()
 }
-
 window["app"] = new App();
