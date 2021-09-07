@@ -29,7 +29,7 @@ export class HousesController {
     garage: form.garage.value,
     year: form.year.value,
     description: form.description.value,
-    img: form.img.value,
+    imgUrl: form.imgUrl.value,
    }
 
    try {

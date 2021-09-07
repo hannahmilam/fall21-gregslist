@@ -10,6 +10,9 @@ class AppState extends EventEmitter {
 
  /** @type {import('./Models/Animal').Animal[]} */
  animals = []
+
+ /** @type {import('./Models/Job').Job[]} */
+ jobs = []
 }
 
 export const ProxyState = new Proxy(new AppState(), {

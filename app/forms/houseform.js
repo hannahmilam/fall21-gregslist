@@ -57,8 +57,8 @@ export function getHouseFormTemplate() {
     <textarea type="text" class="form-control" name="description" id="description" rows="5"></textarea>
   </div>
   <div class="form-group">
-    <label for="img" class="">Image:</label>
-    <input type="url" class="form-control" name="img" id="img" required>
+    <label for="imgUrl" class="">Image:</label>
+    <input type="url" class="form-control" name="imgUrl" id="imgUrl" required>
   </div>
   <div class="button-group my-3">
     <button type="reset" class="btn btn-secondary">clear</button>
