@@ -51,7 +51,7 @@ export class CarsController {
   showCars() {
     _drawCars()
     document.getElementById('controls').innerHTML = `
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
     List Car For Sale
   </button>
     `

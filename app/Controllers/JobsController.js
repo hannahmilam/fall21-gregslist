@@ -11,9 +11,19 @@ function _drawJobs() {
 export class JobsController {
   constructor(){
     ProxyState.on('jobs', _drawJobs)
+    jobsService.getJob()
   }
 
-  addJob(){
+  async deleteJob(){
+    try{
+      await jobsService.deleteJob(jobId)
+    }
+    catch (error) {
+      alert(error.message)
+    }
+    }
+  
+  async addJob(){
     event.preventDefault()
     /**
      * @type {HTMLFormElement}
@@ -23,14 +33,14 @@ export class JobsController {
 
   const jobData = {
   jobTitle: form.jobTitle.value,
-  salary: form.salary.value,
-  imgUrl: form.imgUrl.value,
+  company: form.company.value,
+  rate: form.rate.value,
+  hours: form.hours.value,
   description: form.description.value,
-  companyName: form.companyName.value
     }
 
     try {
-      jobsService.addJob(jobData)
+      await jobsService.addJob(jobData)
     } catch (error) {
       form.make.classList.add('border-danger')
       console.error(error)
@@ -42,7 +52,7 @@ export class JobsController {
     showJobs(){
       _drawJobs()
       document.getElementById('controls').innerHTML = `
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
         List Job Ad
       </button>
       `

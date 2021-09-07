@@ -1,6 +1,7 @@
 import { ProxyState } from "../AppState.js"
 import { housesService } from "../Services/HousesService.js"
 import { getHouseFormTemplate } from "../forms/houseform.js"
+import { carsService } from "../Services/CarsService.js"
 function _drawHouses() {
     let template = ''
     ProxyState.houses.forEach(house => template += house.CardTemplate)
@@ -10,9 +11,22 @@ function _drawHouses() {
 export class HousesController {
   constructor() {
     ProxyState.on('houses', _drawHouses)
+    housesService.getHouse()
+    //  ^^ this houseService.getHouse() function is so that when the page is loaded we immediately get all of the houses loaded to the page from the api.
   }
 
-  addHouse(){
+  async deleteHouse(houseId){
+    try{
+      await housesService.deleteHouse(houseId)
+
+    } catch (error) {
+      alert(error.message)
+
+    }
+    
+  }
+
+  async addHouse(){
    event.preventDefault()
    /**
     * @type{HTMLFormElement}
@@ -21,30 +35,30 @@ export class HousesController {
    const form = event.target
 
    const houseData = {
-    type: form.type.value,
     price: form.price.value,
-    rooms: form.rooms.value,
+    bedrooms: form.bedrooms.value,
     bathrooms: form.bathrooms.value,
-    floors: form.floors.value,
-    garage: form.garage.value,
+    levels: form.levels.value,
     year: form.year.value,
     description: form.description.value,
-    imgUrl: form.imgUrl.value,
+    imgUrl: form.imgUrl.value
    }
 
    try {
-     housesService.addHouse(houseData)
-   } catch (error) {
-     form.make.classList.add('border-danger')
-     console.error(error)
-     return
-   }
-   form.reset()
+    await housesService.addHouse(houseData)
+  } catch (e) {
+    // TODO draw errors
+    form.make.classList.add('border-danger')
+    console.error('[TODO] you were supposed to do this', e)
+    return
+  }
+
+  form.reset()
   }
   showHouses() {
     _drawHouses()
     document.getElementById('controls').innerHTML = `
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
     List House For Sale
   </button>
     `

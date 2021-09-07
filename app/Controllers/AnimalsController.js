@@ -44,7 +44,7 @@ export class AnimalsController {
     showAnimals(){
       _drawAnimals()
       document.getElementById('controls').innerHTML = `
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
         List Animal For Sale
       </button>
       `

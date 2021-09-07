@@ -15,22 +15,21 @@ export function getJobFormTemplate() {
       <input type="text" class="form-control" name="jobTitle" id="jobTitle">
       </div>
     
-      <div class="form-group"><label for="companyName">Company Name:</label>
-      <input type="text" class="form-control" name="companyName" id="companyName">
+      <div class="form-group"><label for="company">Company Name:</label>
+      <input type="text" class="form-control" name="company" id="company">
       </div>
     
-      <div class="form-group"><label for="salary">Salary</label>
-      <input type="text" class="form-control" name="salary" id="salary">
+      <div class="form-group"><label for="rate">Pay Rate:</label>
+      <input type="text" class="form-control" name="rate" id="rate">
+      </div>
+
+      <div class="form-group"><label for="hours">Hours per week:</label>
+      <input type="text" class="form-control" name="hours" id="hours">
       </div>
     
       <div class="form-group">
         <label for="description" class="">description:</label>
         <input type="text" class="form-control" name="description" id="description" rows="5">
-      </div>
-    
-      <div class="form-group">
-        <label for="imgUrl" class="">Image:</label>
-        <input type="url" class="form-control" name="imgUrl" id="imgUrl" required>
       </div>
     
       <div class="button-group my-3">

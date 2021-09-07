@@ -10,3 +10,38 @@
   background-size: cover;
 
 }
+.bg-color{
+  background-color: rgba(255, 255, 255, 0.158);
+}
+
+.card{
+  background-color: #2699a649;
+}
+
+.img-size{
+  height: 150px;
+}
+
+.btn-color{
+  background-color: #373ae494;
+  
+}
+.btn-color:hover{
+  background-color: #6567c994;; 
+}
+
+.masonry { /* Masonry container */
+  column-count: 4;
+  column-gap: 1em;
+}
+
+.item { /* Masonry bricks or child elements */
+  background-color: #eee;
+  display: inline-block;
+  margin: 0 0 1em;
+  width: 100%;
+}
+
+
+
+

@@ -26,27 +26,16 @@ export function getHouseFormTemplate() {
     <input type="number" class="form-control" name="price" id="price" required>
   </div>
   <div class="form-group">
-    <label for="rooms" class="">Bedrooms:</label>
-    <input type="number" class="form-control" name="rooms" id="rooms" min="0" max="20" required>
+    <label for="bedrooms" class="">Bedrooms:</label>
+    <input type="number" class="form-control" name="bedrooms" id="bedrooms" min="0" max="20" required>
   </div>
   <div class="form-group">
     <label for="bathrooms" class="">Bathrooms:</label>
     <input type="number" class="form-control" name="bathrooms" id="bathrooms" min="0" max="20" required>
   </div>
   <div class="form-group">
-    <label for="floors" class="">Floors:</label>
-    <input type="number" class="form-control" name="floors" id="floors" min="0" max="20" required>
-  </div>
-  <div class="form-group">
-    <label for="garage" class="">Garage:</label>
-    <select type="garage" class="form-control" name="garage" id="garage"><option disabled selected value="">Please Choose Garage Type</option> 
-    <option>No Garage</option>
-    <option>Car Port</option>
-    <option>One Car</option>
-    <option>Two Car</option>
-    <option>Three Car</option>
-    <option>Two Car with RV</option>
-    <option>Three Car with RV</option></select>
+    <label for="levels" class="">Levels:</label>
+    <input type="number" class="form-control" name="levels" id="levels" min="0" max="20" required>
   </div>
   <div class="form-group">
     <label for="year" class="">Year:</label>
